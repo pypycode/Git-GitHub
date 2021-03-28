@@ -92,7 +92,7 @@ void PWM1_Start(void)
 
 void PWM2_Start(void)
 {
-    CCP2M3 = 1;
+    CCP2M3 = 0;
     CCP2M2 = 1;
 #if TMR2PRESCALE == 1
     T2CKPS0 = 0;
