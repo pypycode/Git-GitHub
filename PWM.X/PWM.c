@@ -93,6 +93,7 @@ void PWM1_Start(void)
 void PWM2_Start(void)
 {
     CCP2M3 = 0;
+	
     CCP2M2 = 1;
 #if TMR2PRESCALE == 1
     T2CKPS0 = 0;
@@ -107,3 +108,31 @@ void PWM2_Start(void)
     TMR2ON = 1;
     TRISC1 = 0;
 }
+
+#elif TMR2PRESCALE == 4
+    T2CKPS0 = 1;
+    T2CKPS1 = 0;
+#elif TMR2PRESCALE == 16
+    T2CKPS0 = 1;
+    T2CKPS1 = 1;
+#endif
+    TMR2ON = 1;
+	
+	
+	#elif TMR2PRESCALE == 4
+    T2CKPS0 = 1;
+    T2CKPS1 = 0;
+#elif TMR2PRESCALE == 16
+    T2CKPS0 = 1;
+    T2CKPS1 = 1;
+#endif
+    TMR2ON = 1;
+	
+	#elif TMR2PRESCALE == 4
+    T2CKPS0 = 1;
+    T2CKPS1 = 0;
+#elif TMR2PRESCALE == 16
+    T2CKPS0 = 1;
+    T2CKPS1 = 1;
+#endif
+    TMR2ON = 1;
