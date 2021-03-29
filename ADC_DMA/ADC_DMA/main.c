@@ -23,9 +23,6 @@ int main(void)
 }
 void ADC_Config(void)
 {
-  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA2, ENABLE);     
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);  
-  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
   
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;                     
