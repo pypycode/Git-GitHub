@@ -93,7 +93,6 @@ void USART1(void)
 		c2=USART_ReceiveData(USART1); 
 		if(i<100)
 		{
-			sms[i++]=c2;
 		}
     else
     {
