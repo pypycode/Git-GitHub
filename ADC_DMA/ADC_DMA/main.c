@@ -48,6 +48,9 @@ void ADC_Config(void)
   /* DMA2_Stream0 enable */
   DMA_Cmd(DMA2_Stream0, ENABLE);
   
+  DMA_Init(DMA2_Stream0, &DMA_InitStructure);
+  DMA_Init(DMA2_Stream0, &DMA_InitStructure);
+  DMA_Init(DMA2_Stream0, &DMA_InitStructure);
   
   /* ADC Common Init **********************************************************/
   ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent;  // mode don co ban không su dung chuc nang dac biet
