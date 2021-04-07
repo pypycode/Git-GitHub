@@ -51,7 +51,9 @@ void ADC_Config(void)
   DMA_Init(DMA2_Stream0, &DMA_InitStructure);
   DMA_Init(DMA2_Stream0, &DMA_InitStructure);
   DMA_Init(DMA2_Stream0, &DMA_InitStructure);
-  
+  DMA_Init(DMA2_Stream0, &DMA_InitStructure);
+  DMA_Init(DMA2_Stream0, &DMA_InitStructure);
+  DMA_Init(DMA2_Stream0, &DMA_InitStructure);
   /* ADC Common Init **********************************************************/
   ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent;  // mode don co ban không su dung chuc nang dac biet
   ADC_CommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div2; // bo chia 2 lay mau o tan so cao nhat
