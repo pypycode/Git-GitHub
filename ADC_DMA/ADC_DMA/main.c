@@ -82,6 +82,26 @@ void ADC_Config(void)
   /* Start ADC1 Software Conversion */
   ADC_SoftwareStartConv(ADC1);
 }
+void USART1(void)
+{
+	volatile unsigned int IIR;
+  uint8_t c2;
+  if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET) // Neu co ky tu moi trong bo dem nhan
+	{
+		IIR = USART1->SR;
+		GPIO_WriteBit(GPIOB,GPIO_Pin_9,(BitAction)(0));
+		c2=USART_ReceiveData(USART1); 
+		if(i<100)
+		{
+			sms[i++]=c2;
+		}
+    else
+    {
+			i=0;
+	  }
+	}
+}
+
 void Delay(__IO uint32_t nCount)
 {
   while(nCount--)
