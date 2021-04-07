@@ -28,8 +28,7 @@ void ADC_Config(void)
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;                     
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL ;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-  DMA_InitStructure.DMA_Channel = DMA_Channel_0;   //  ho tro kenh 0
+  
   DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t)&ADCValue;  // bien DMA_Memory0BaseAddr se chua dia chi bien adc
   DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)(&(ADC1->DR)); //gan dia chi thanh ghi chua gia tri chuyen doi adc vao bien  DMA_PeripheralBaseAddr
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory; //chon huong du lieu tu ngoai vi den bo nho
