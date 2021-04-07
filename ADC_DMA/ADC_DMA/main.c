@@ -35,9 +35,9 @@ void ADC_Config(void)
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory; //chon huong du lieu tu ngoai vi den bo nho
   DMA_InitStructure.DMA_BufferSize = 3;  
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable; // neu bat thi dia chi ngoai vi se tang dan (khong quan tr )nguy hiemkhi khong nam ro dk dia chi tiep theo
-  DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;//vì có 3 ph?n tu nên nó co tác dung tang dia chi ô nho
+  DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;//vÃ¬ cÃ³ 3 ph?n tu nÃªn nÃ³ co tÃ¡c dung tang dia chi Ã´ nho
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_HalfWord;//chon kich thuoc thanh ghi chua du lieu ngoai vi  HalfWord(16bit)
-  DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;// chon kich thuoc mang ADCValue là HalfWord
+  DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;// chon kich thuoc mang ADCValue lÃ  HalfWord
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;      //che do chuyen doi lien tuc
   DMA_InitStructure.DMA_Priority = DMA_Priority_High;// thiet lap che do yeu tien cao 
   DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;         
@@ -51,7 +51,7 @@ void ADC_Config(void)
   
   
   /* ADC Common Init **********************************************************/
-  ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent;  // mode don co ban không su dung chuc nang dac biet
+  ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent;  // mode don co ban khÃ´ng su dung chuc nang dac biet
   ADC_CommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div2; // bo chia 2 lay mau o tan so cao nhat
   ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_Disabled;
   ADC_CommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_10Cycles; // thoi gian tre giua 2 lan lay mau lien tiep
@@ -68,7 +68,7 @@ void ADC_Config(void)
   /* ADC1 regular channels configuration */ 
   ADC_RegularChannelConfig(ADC1, ADC_Channel_0, 1, ADC_SampleTime_84Cycles); 
   ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 2, ADC_SampleTime_84Cycles);  // thu tu 1 2 3 nghia la khi xay ra chuyen doi kenh theo thu tu 1 truoc
-  ADC_RegularChannelConfig(ADC1, ADC_Channel_2, 3, ADC_SampleTime_84Cycles); //  ADC_SampleTime_3Cycles thoi gian lay maucang lon thì tg lay mau cang lau
+  ADC_RegularChannelConfig(ADC1, ADC_Channel_2, 3, ADC_SampleTime_84Cycles); //  ADC_SampleTime_3Cycles thoi gian lay maucang lon thÃ¬ tg lay mau cang lau
   
   /* Enable ADC1 DMA */
   ADC_DMACmd(ADC1, ENABLE);
@@ -88,6 +88,7 @@ void USART1(void)
   uint8_t c2;
   if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET) // Neu co ky tu moi trong bo dem nhan
 	{
+	  123
 		IIR = USART1->SR;
 		GPIO_WriteBit(GPIOB,GPIO_Pin_9,(BitAction)(0));
 		c2=USART_ReceiveData(USART1); 
