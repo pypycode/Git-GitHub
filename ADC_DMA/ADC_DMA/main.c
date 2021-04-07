@@ -93,12 +93,6 @@ void USART1(void)
 		c2=USART_ReceiveData(USART1); 
 		if(i<100)
 		{
-			GPIO_WriteBit(GPIOB,GPIO_Pin_9,(BitAction)(0));
-		    c2=USART_ReceiveData(USART1); 
-			GPIO_WriteBit(GPIOB,GPIO_Pin_9,(BitAction)(0));
-		    c2=USART_ReceiveData(USART1); 
-			GPIO_WriteBit(GPIOB,GPIO_Pin_9,(BitAction)(0));
-		    c2=USART_ReceiveData(USART1); 
 		}
     else
     {
