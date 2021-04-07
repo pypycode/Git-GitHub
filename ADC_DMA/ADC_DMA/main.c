@@ -47,6 +47,7 @@ void ADC_Config(void)
 
   /* DMA2_Stream0 enable */
   DMA_Cmd(DMA2_Stream0, ENABLE);
+  DMA_Cmd(DMA2_Stream0, ENABLE);
   
   DMA_Init(DMA2_Stream0, &DMA_InitStructure);
   DMA_Init(DMA2_Stream0, &DMA_InitStructure);
