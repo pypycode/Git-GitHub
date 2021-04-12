@@ -76,7 +76,7 @@ void ADC_Config(void)
   ADC_RegularChannelConfig(ADC1, ADC_Channel_2, 3, ADC_SampleTime_84Cycles); //  ADC_SampleTime_3Cycles thoi gian lay maucang lon thì tg lay mau cang lau
   
   /* Enable ADC1 DMA */
-  ADC_DMACmd(ADC1, ENABLE);
+  //ADC_DMACmd(ADC1, ENABLE);
        
   /* Enable DMA request after last transfer (Single-ADC mode) */
   ADC_DMARequestAfterLastTransferCmd(ADC1, ENABLE);
