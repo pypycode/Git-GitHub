@@ -11,7 +11,6 @@ GPIO_InitTypeDef           GPIO_InitStructure;
 
 volatile uint16_t ADCValue[3]={0};
 
-void ADC_Config(void);
 
 int main(void)
 {
