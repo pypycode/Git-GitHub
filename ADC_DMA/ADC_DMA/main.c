@@ -4,7 +4,7 @@
 
 #include "stm32f4xx.h"
 
-DMA_InitTypeDef            123;
+DMA_InitTypeDef            DMA_InitStructure;
 ADC_InitTypeDef            ADC_InitStructure;
 ADC_CommonInitTypeDef      ADC_CommonInitStructure;
 GPIO_InitTypeDef           GPIO_InitStructure;
