@@ -7,7 +7,7 @@
 DMA_InitTypeDef            DMA_InitStructure;
 ADC_InitTypeDef            ADC_InitStructure;
 ADC_CommonInitTypeDef      ADC_CommonInitStructure;
-GPIO_InitTypeDef           GPIO_InitStructure;
+GPIO_InitTypeDef           abc;
 
 volatile uint16_t ADCValue[3]={0};
 
